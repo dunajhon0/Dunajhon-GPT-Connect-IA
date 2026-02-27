@@ -1,5 +1,9 @@
+User-agent: Mediapartners-Google
+Disallow:
+
 User-agent: *
 Allow: /
-Disallow: /_next/
+Allow: /_next/
+Disallow:
 
-Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: https://dunajhon.com/sitemap.xml

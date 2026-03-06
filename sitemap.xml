@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dunajhon.com/</loc><lastmod>2026-03-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dunajhon.com/contacto.html</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/aviso-legal.html</loc><lastmod>2026-03-04</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://dunajhon.com/privacidad.html</loc><lastmod>2026-03-04</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://dunajhon.com/cookies.html</loc><lastmod>2026-03-04</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  
+  <!-- Nuevas subpáginas expandidas -->
+  <url><loc>https://dunajhon.com/productividad.html</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/entretenimiento.html</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/utilidades.html</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/como-funciona.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/blog/importancia-ia.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/quiz-integracion-ia.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/minicurso-ia.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/biblioteca-prompts.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/glosario-ia.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/casos-uso-real.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dunajhon.com/faq.html</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

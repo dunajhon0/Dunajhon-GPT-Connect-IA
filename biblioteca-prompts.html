@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Prompts - Dunajhon GPT Connect IA</title>
+    <meta name="description" content="Una colección exhaustiva de los mejores prompts listos para copiar y pegar para mejorar tu eficiencia con Inteligencia Artificial.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .prompt-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+        .prompt-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 5px 20px rgba(0, 240, 255, 0.1);
+        }
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .prompt-badge {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--neon-green);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .prompt-text {
+            background: rgba(5, 10, 21, 0.8);
+            border-left: 3px solid var(--cyan);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            font-family: inherit;
+            color: var(--text-primary);
+            line-height: 1.5;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--electric-blue);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .copy-btn:hover {
+            background: var(--cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+        .copy-btn.copied {
+            background: var(--neon-green);
+            color: black;
+        }
+    </style>
+    <script>
+        function copyPrompt(button, promptId) {
+            const text = document.getElementById(promptId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Copiado';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: var(--cyan);"></i>
+                <span class="logo-text">Dunajhon GPT</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#directorios">Directorios</a></li>
+                <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                <li><a href="index.html#recursos" class="active">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Biblioteca de Prompts</h1>
+                <p class="slogan">Estructuras pre-entrenadas avanzadas listas para copiar y pegar.</p>
+            </div>
+        </section>
+
+        <section class="container content-wrapper">
+            <p>
+                La barrera principal al usar un modelo de lenguaje en crudo es encontrar las palabras exactas para activar su razonamiento más sofisticado. En Dunajhon GPT Connect IA, hemos curado esta biblioteca técnica. Los siguientes "prompts" (instrucciones) han sido validados a través de cientos de iteraciones para obtener los resultados más limpios, extensos y estructurados que exigen tareas de alto rigor. 
+            </p>
+            <p>
+                Nota: Algunas de estas funcionalidades ya están integradas de forma nativa e invisible en nuestras plataformas de <a href="productividad.html">Productividad</a>, pero te las compartimos para que puedas usarlas de manera independiente si lo precisas. Solo haz clic en el botón de copiar y reemplaza los elementos entre corchetes [ ] con tu información específica.
+            </p>
+
+            <h3 style="margin-top: 50px; color: var(--cyan);">Productividad y Redacción Corporativa</h3>
+            
+            <div class="prompt-card">
+                <div class="prompt-header">
+                    <h4>Redactor de Correos Críticos Profesionales</h4>
+                    <span class="prompt-badge">Productividad</span>
+                </div>
+                <div class="prompt-text">
+                    <button class="copy-btn" onclick="copyPrompt(this, 'prompt-1')"><i class="fa-regular fa-copy"></i> Copiar</button>
+                    <div id="prompt-1">Actúa como un Ejecutivo de Relaciones Públicas de nivel senior. Tu tarea es reescribir la información cruda que te daré a continuación, transformándola en un correo electrónico profesional, claro, extremadamente diplomático y asertivo.<br><br>Contexto: [Describir a quién va y el problema de fondo].<br><br>Información cruda a incluir: [Inserta tus notas desordenadas o enfadadas aquí].<br><br>Reglas:
+- El tono debe ser colaborativo, nunca acusatorio.
+- No superes los 3 párrafos de longitud.
+- Incluye un 'Call to Action' (llamada a la acción) claro y procesable al final de forma sutil.</div>
+                </div>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-header">
+                    <h4>Sintetizador de Reuniones de Alta Densidad</h4>
+                    <span class="prompt-badge">Síntesis</span>
+                </div>
+                <div class="prompt-text">
+                    <button class="copy-btn" onclick="copyPrompt(this, 'prompt-2')"><i class="fa-regular fa-copy"></i> Copiar</button>
+                    <div id="prompt-2">Actúa como un asistente de dirección de máximo rendimiento enfocado en la síntesis de información. Te proporcionaré a continuación la transcripción o notas sueltas de una reunión.
+<br><br>
+Tu objetivo es entregarme los siguientes aportes exactos utilizando Markdown:<br>
+1. Un Resumen Ejecutivo (H2) de exactamente dos oraciones.<br>
+2. Decisiones Claves Tomadas (Bullet points estrictos).<br>
+3. Propietarios de Tareas (Tabla con: Tarea, Responsable, Fecha Límite sugerida).<br>
+4. Temas que quedaron en el tintero / Dudas abiertas.<br><br>Aquí está la transcripción: [PEGAR TRANSCRIPCIÓN].</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px; color: var(--cyan);">Aprendizaje y Desglose Analítico</h3>
+
+            <div class="prompt-card">
+                <div class="prompt-header">
+                    <h4>El Maestro de Feynman - Aprender Conceptos Difíciles</h4>
+                    <span class="prompt-badge">Educación</span>
+                </div>
+                <div class="prompt-text">
+                    <button class="copy-btn" onclick="copyPrompt(this, 'prompt-3')"><i class="fa-regular fa-copy"></i> Copiar</button>
+                    <div id="prompt-3">Quiero comprender a fondo el siguiente tema complejo: [TEMA COMPLEJO].<br><br>Sé mi tutor utilizando la técnica de Feynman. Por favor, realiza estos tres pasos estrictamente en este orden:<br>
+1. Explícame el concepto como si yo tuviera 12 años, utilizando analogías accesibles de la vida diaria y evitando tecnicismos a menos que los definas inmediatamente.<br>
+2. Preséntame los 3 pilares matemáticos, lógicos o científicos subyacentes del concepto para darle profundidad (nivel universitario básico).<br>
+3. Hazme 2 preguntas de conocimiento cruzado al final para comprobar que lo he entendido, y evalúa mi respuesta.</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px; color: var(--cyan);">Optimización de Ideas Creativas</h3>
+
+            <div class="prompt-card">
+                <div class="prompt-header">
+                    <h4>Crítico Destructivo/Constructivo de Proyectos</h4>
+                    <span class="prompt-badge">Análisis</span>
+                </div>
+                <div class="prompt-text">
+                    <button class="copy-btn" onclick="copyPrompt(this, 'prompt-4')"><i class="fa-regular fa-copy"></i> Copiar</button>
+                    <div id="prompt-4">Quiero que asumas el rol de dos expertos ("Red Team" y "Blue Team") para evaluar la idea de mi proyecto: [DESCRIPCIÓN DE TU PROYECTO].<br><br>Fase 1 (Red Team): Actúa como un inversor o revisor hipercrítico. Encuentra y descríbeme de forma dura pero objetiva cuáles son las 3 mayores vulnerabilidades fatales de esta idea. Dónde fracasará.<br><br>Fase 2 (Blue Team): Actúa como mi socio cofundador optimista y experto en resolución de problemas. Lee las 3 vulnerabilidades descubiertas en la Fase 1, y propón estrategias concretas, de bajo coste y alta viabilidad para mitigar completamente esos riesgos.</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 50px; text-align: center; color: var(--text-secondary);">
+                Continuamente agregamos nuevos Prompts maestros a nuestra colección tras investigar en foros especializados y testear el rigor algorítmico. Vuelve pronto para explorar nuevas estructuras que llevarán tus interacciones con GPTs al extremo.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Mantener estructura básica -->
+                <div class="footer-col">
+                    <h4>Dunajhon GPT</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 15px;">
+                        El directorio definitivo para conectar, aprender y potenciar tu uso de la Inteligencia Artificial.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Directorios</h4>
+                    <ul>
+                        <li><a href="productividad.html">Productividad</a></li>
+                        <li><a href="entretenimiento.html">Entretenimiento</a></li>
+                        <li><a href="utilidades.html">Utilidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aprende IA</h4>
+                    <ul>
+                        <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                        <li><a href="minicurso-ia.html">Minicurso Básico</a></li>
+                        <li><a href="glosario-ia.html">Glosario de Términos</a></li>
+                        <li><a href="blog/importancia-ia.html">Importancia de la IA</a></li>
+                        <li><a href="casos-uso-real.html">Casos de Uso Reales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal y Contacto</h4>
+                    <ul>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="contacto.html">Contacto Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dunajhon GPT Connect IA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

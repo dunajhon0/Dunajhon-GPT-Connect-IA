@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Funciona - Dunajhon GPT Connect IA</title>
+    <meta name="description" content="Aprende cómo Dunajhon GPT Connect IA conecta la inteligencia artificial con mentes y herramientas especializadas para potenciar tus tareas y proyectos.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 50px 0;
+            position: relative;
+        }
+        .flow-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--electric-blue), var(--neon-green));
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        .flow-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .flow-content {
+            width: 45%;
+            background: var(--surface-color);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .flow-icon-container {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-color);
+            border: 4px solid var(--cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flow-step:nth-child(even) .flow-icon-container {
+            border-color: var(--neon-green);
+            color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+        }
+        @media (max-width: 768px) {
+            .flow-container::before {
+                left: 40px;
+            }
+            .flow-step, .flow-step:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .flow-content {
+                width: calc(100% - 90px);
+            }
+            .flow-icon-container {
+                left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: var(--cyan);"></i>
+                <span class="logo-text">Dunajhon GPT</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#directorios">Directorios</a></li>
+                <li><a href="como-funciona.html" class="active">Cómo Funciona</a></li>
+                <li><a href="index.html#recursos">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Cómo Funciona el Ecosistema</h1>
+                <p class="slogan">La arquitectura detrás de la revolución de los subdominios IA.</p>
+            </div>
+        </section>
+
+        <section class="container content-wrapper">
+            <h2>El Concepto de Dunajhon GPT Connect IA</h2>
+            <p>
+                <strong>Dunajhon GPT Connect IA</strong> no es simplemente una lista de enlaces a herramientas genéricas. Nuestro proyecto se basa en la creación de una arquitectura descentralizada de "inteligencias hiper-especializadas". 
+                En lugar de utilizar un único modelo de Inteligencia Artificial para todas las tareas (que a menudo resulta en respuestas genéricas y de bajo impacto), conectamos a los usuarios con subdominios meticulosamente diseñados para resolver un problema específico de la manera más óptima posible. Cada subdominio alberga un GPT o una aplicación potenciada por IA que ha sido calibrada, entrenada o pre-configurada (a través de prompts estructurales) para dominar su nicho particular.
+            </p>
+            <p>
+                La metodología de subpáginas que hemos implementado a lo largo del tiempo (como se ha visto con proyectos exitosos como el Horóscopo y Therian) ha demostrado ser el enfoque perfecto tanto para optimizar el rendimiento SEO orgánico, garantizando la aprobación y maximización de monetización mediante plataformas como AdSense, como para brindar una experiencia de usuario sin fricciones. 
+                Los usuarios obtienen herramientas que van directo al grano, sin distracciones, y en entornos diseñados visual y técnicamente para ese propósito particular.
+            </p>
+
+            <h3 style="margin-top: 50px; text-align: center;">Flujo de Conexión Inteligente</h3>
+            
+            <div class="flow-container">
+                <!-- Paso 1 -->
+                <div class="flow-step">
+                    <div class="flow-content">
+                        <h4 style="color: var(--cyan); font-size: 1.3rem; margin-bottom: 10px;">1. Descubrimiento en el Hub Central</h4>
+                        <p>Inicias tu viaje en www.dunajhon.com, nuestro directorio principal. Aquí exploras las distintas categorías (Productividad, Entretenimiento, Utilidades) que engloban las necesidades integrales de cualquier usuario digital moderno.</p>
+                    </div>
+                    <div class="flow-icon-container">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="flow-step">
+                    <div style="width: 45%;"></div>
+                    <div class="flow-icon-container">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <div class="flow-content">
+                        <h4 style="color: var(--neon-green); font-size: 1.3rem; margin-bottom: 10px;">2. Enrutamiento Especializado</h4>
+                        <p>Al seleccionar una tarjeta, el sistema te redirige a un subdominio específico (por ejemplo, atestadosfast.dunajhon.com). Esta separación garantiza que todos los recursos computacionales y el contexto de la IA estén dedicados 100% a la tarea que elegiste.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="flow-step">
+                    <div class="flow-content">
+                        <h4 style="color: var(--cyan); font-size: 1.3rem; margin-bottom: 10px;">3. Interacción Hiper-Calibrada</h4>
+                        <p>Dentro del subdominio, interactúas con un agente conversacional (GPT) u herramienta IA que ya cuenta con los "System Prompts" avanzados y bases de conocimiento inyectados. No necesitas enseñarle a la IA qué hacer; ella ya es una experta en ese dominio.</p>
+                    </div>
+                    <div class="flow-icon-container">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="flow-step">
+                    <div style="width: 45%;"></div>
+                    <div class="flow-icon-container">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="flow-content">
+                        <h4 style="color: var(--neon-green); font-size: 1.3rem; margin-bottom: 10px;">4. Resultados Excepcionales</h4>
+                        <p>Obtienes un nivel de precisión, velocidad y utilidad que difícilmente lograrías desde una interfaz de chat en blanco convencional. El resultado final se traduce en tiempo ahorrado o en experiencias de entretenimiento inmersivas superiores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Por Qué Elegimos Esta Arquitectura (SEO & AdSense)</h2>
+            <p>
+                A nivel técnico, la creación de subdominios aislados pero interconectados por este <em>Hub</em> central facilita enormemente el rastreo por parte de los motores de búsqueda (Googlebot). Al tener contenido extenso, relevante y altamente especializado (como demostramos en cada subpágina con más de 400 palabras de valor real), logramos una densidad semántica altísima. Esto favorece un <em>Trust Rank</em> elevado.
+            </p>
+            <p>
+                Para la monetización con <strong>Google AdSense</strong>, esta estructura es oro puro. AdSense requiere políticas claras, navegación transparente e inventario publicitario valioso. Al mantener un diseño limpio, oscuro (lo cual resalta increíblemente los bloques de anuncios) y una estructura de navegación predictiva a través del <em>index</em>, cumplimos todas las <em>Directrices para Webmasters</em>, asegurando una rápida aprobación y altos índices de RPM (Ingresos por cada mil impresiones).
+            </p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html#directorios" class="btn btn-primary">Ir a los Directorios</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Dunajhon GPT</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 15px;">
+                        El directorio definitivo para conectar, aprender y potenciar tu uso de la Inteligencia Artificial.
+                    </p>
+                </div>
+                <!-- ... other footer cols logic ... (Keeping minimal for layout purposes but links must be complete) -->
+                <div class="footer-col">
+                    <h4>Directorios</h4>
+                    <ul>
+                        <li><a href="productividad.html">Productividad</a></li>
+                        <li><a href="entretenimiento.html">Entretenimiento</a></li>
+                        <li><a href="utilidades.html">Utilidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aprende IA</h4>
+                    <ul>
+                        <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                        <li><a href="minicurso-ia.html">Minicurso Básico</a></li>
+                        <li><a href="glosario-ia.html">Glosario de Términos</a></li>
+                        <li><a href="blog/importancia-ia.html">Importancia de la IA</a></li>
+                        <li><a href="casos-uso-real.html">Casos de Uso Reales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal y Contacto</h4>
+                    <ul>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="contacto.html">Contacto Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dunajhon GPT Connect IA. Todos los derechos reservados. Titular: Dunajhon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

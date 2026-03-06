@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: ¿Qué tanto sabes sobre IA? - Dunajhon GPT Connect IA</title>
+    <meta name="description" content="Pon a prueba tus conocimientos sobre Inteligencia Artificial con este divertido quiz interactivo de Dunajhon GPT. Mide cuánto la integras en tu día.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .quiz-container {
+            position: relative;
+            background: rgba(18, 25, 45, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(0, 240, 255, 0.05);
+            overflow: hidden;
+        }
+
+        .quiz-slide {
+            display: none;
+            animation: fadeInRight 0.5s ease forwards;
+        }
+
+        .quiz-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .question-title {
+            font-size: 1.8rem;
+            color: var(--cyan);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .option-btn {
+            background: rgba(5, 10, 21, 0.6);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            color: var(--text-primary);
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn:hover {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--cyan);
+            transform: translateY(-2px);
+        }
+
+        .option-btn.selected {
+            background: var(--electric-blue);
+            color: #fff;
+            border-color: var(--cyan);
+        }
+
+        .quiz-progress {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .progress-bar-container {
+            flex-grow: 1;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            margin: 0 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), var(--neon-green));
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .quiz-result {
+            display: none;
+            text-align: center;
+            animation: scaleIn 0.5s ease forwards;
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .result-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--cyan), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .level-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: var(--cyan);"></i>
+                <span class="logo-text">Dunajhon GPT</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#directorios">Directorios</a></li>
+                <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                <li><a href="index.html#recursos" class="active">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Test: Integración de IA</h1>
+                <p class="slogan">Descubre tu nivel de dominio y simbiosis con la Inteligencia Artificial.</p>
+            </div>
+        </section>
+
+        <!-- Contenido textual para SEO -->
+        <section class="container" style="max-width: 800px; margin-bottom: 40px;">
+            <p style="text-align: center; color: var(--text-secondary);">
+                Comprender la Inteligencia Artificial no es solo saber cómo funciona por dentro, sino cómo aplicarla para potenciar tu vida. Este breve test interactivo evaluará cuánta ventaja le estás sacando a las herramientas generativas modernas y cómo adaptas tu forma de pensar a la "Ingeniería de Prompts". ¡Diviértete y descubre tu arquetipo tecnológico!
+            </p>
+        </section>
+
+        <section class="container">
+            <div class="quiz-container" id="quizContainer">
+                
+                <!-- Welcome Slide -->
+                <div class="quiz-slide active" id="slide-welcome">
+                    <div style="text-align: center;">
+                        <i class="fa-solid fa-brain" style="font-size: 4rem; color: var(--neon-green); margin-bottom: 20px;"></i>
+                        <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 15px;">¿Listo para desafiar a la máquina?</h2>
+                        <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 30px; font-size: 1.1rem;">
+                            Responde honestamente 5 preguntas sobre tu uso diario y percepción de la tecnología para descubrir tu nivel de maestría.
+                        </p>
+                        <button class="btn btn-primary" onclick="startQuiz()" style="font-size: 1.2rem; padding: 15px 40px;">Iniciar Test</button>
+                    </div>
+                </div>
+
+                <!-- Questions Container (Populated dynamically via JS) -->
+                <div id="questions-area"></div>
+
+                <!-- Quiz Controls -->
+                <div class="quiz-progress" id="quiz-progress" style="display: none;">
+                    <span id="q-current" style="color: var(--cyan); font-weight: bold;">1</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <span id="q-total" style="color: var(--text-secondary);">5</span>
+                </div>
+
+                <!-- Result Slide -->
+                <div class="quiz-result" id="slide-result">
+                    <div class="result-icon" id="res-icon"><i class="fa-solid fa-award"></i></div>
+                    <h2 style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 5px;">Eres un:</h2>
+                    <div class="level-title" id="res-level">Nivel</div>
+                    <p style="color: var(--text-primary); max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;" id="res-desc">
+                        Descripción basada en los puntos.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="location.reload()">Reintentar</button>
+                        <a href="minicurso-ia.html" class="btn btn-primary">Tomar Minicurso IA</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <div style="height: 100px;"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Dunajhon GPT</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 15px;">
+                        El directorio definitivo para conectar, aprender y potenciar tu uso de la Inteligencia Artificial.
+                    </p>
+                </div>
+                <!-- ... Reducido por espacio, pero consistente ... -->
+                <div class="footer-col">
+                    <h4>Directorios</h4>
+                    <ul>
+                        <li><a href="productividad.html">Productividad</a></li>
+                        <li><a href="entretenimiento.html">Entretenimiento</a></li>
+                        <li><a href="utilidades.html">Utilidades</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dunajhon GPT Connect IA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
